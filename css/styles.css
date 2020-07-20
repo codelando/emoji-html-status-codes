@@ -1,0 +1,142 @@
+/* https://coolors.co/37b2e6-fde635-9bc53d-c3423f-9185AD     */
+* { 
+    box-sizing: border-box; 
+    transition: all .3s;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FAF2EF;
+}
+
+header {
+    overflow: auto;
+    margin-bottom: 1rem;
+    background-color: #785964;
+    color: white;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group {
+    width: 95%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.group .card {
+    margin-bottom: 1rem;
+}
+
+.group-info {}
+.group-success {}
+.group-redir {}
+.group-client {}
+.group-server {}
+
+.item {}
+
+.card {
+    display: flex;
+
+    border-radius: .5rem;
+    background-color: white;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.15);
+}
+
+.card .left {
+    border-radius: .5rem 0 0 .5rem;
+
+    padding: 2rem;
+}
+
+.card.is-info .left{
+    color: white;
+    background-color: #37b2e6;
+}
+.card.is-success .left{
+    background-color: #9bc53d;
+}
+.card.is-redir .left{
+    color: white;
+    background-color: #9185AD;
+}
+.card.is-client .left{
+    background-color: #fde635;
+}
+.card.is-server .left{
+    color: white;
+    background-color: #c3423f;
+}
+
+.card .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .left figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 96px;
+    width: 96px;
+    margin: 0;
+
+    border-radius: 50%;
+    background-color: white;
+    font-size: 3rem;
+}
+
+.card .figure h3 {
+    margin: .5rem 0;
+}
+
+.card .desc {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    padding: 2rem;
+}
+
+.card .desc h3 {
+    margin: 0 0 .5rem;
+}
+
+/* Tarjeta colapsada */
+
+.card.is-collapsed .left,
+.card.is-collapsed .desc {
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.card.is-collapsed .left figure {
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: .5rem;
+
+    font-size: 1rem;
+}
+
+.card.is-collapsed h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.card.is-collapsed .desc p { display: none; }
